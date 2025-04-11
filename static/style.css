@@ -1,0 +1,104 @@
+body {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        padding: 0;
+        background-color: #f9b492;
+        font-size: large;
+    }
+    
+    nav {
+        background-color: #f8fd9f;
+        color: #ff0bda;
+        padding: 10px;
+        align-items: center;
+    }
+    
+    .navOption {
+        background-color: #b977ff; /* warm brown tone */
+        color: #ff0bda; 
+        padding: 10px 20px;
+        text-align: center;
+        height: 20px;
+        width: 120px;
+        float: left;
+        border: none;
+        border-radius: 8px;
+        margin-right: 10px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .navOption:hover {
+        background-color: #d4a7fe; /* slightly lighter brown on hover */
+    }
+    
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        color: #ff0bda;
+    }
+    
+    .post {
+        background-color: white;
+        padding: 15px;
+        margin: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid #d4a7fe;
+        border-radius: 8px;
+        width: "400";
+        height:"200";
+        float: left;
+    }
+
+    
+    button {
+        background-color: #543601;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #4cae4c;
+    }
+
+    .input-error {
+        border: 2px solid red;
+        background-color: #ffe6e6;
+    }
+    
+    .homePage{
+        padding: 10px 20px;
+        text-align: center;
+        height: 20px;
+        width: 120px;
+        float: right;
+        border: none;
+        border-radius: 8px;
+        margin-right: 10px;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+    }
+
+    /* .frame{
+        width: 100%; 
+        max-width: 700px; 
+        height: 400px; 
+        border: 3px solid #b977ff;  
+        border-radius: 10px; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+        margin-top: 20px;
+    } */

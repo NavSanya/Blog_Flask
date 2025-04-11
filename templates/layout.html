@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Blogging App</title>
+                <link rel='stylesheet' href = "{{url_for('static', filename='style.css')}}">
+        </head>
+
+        <body>
+                <nav>
+                        {%if session['username']%}
+                                <div class="navOption">
+                                        <a href = "{{url_for('dashboard')}}">Dashboard</a>
+                                </div>
+                                <div class="navOption">
+                                        <a href = "{{url_for('logout')}}">Logout</a>
+                                </div>
+                        {% else %}
+                                <div class="navOption"> 
+                                        <a href = "{{url_for('login')}}">Login</a>
+                                </div>
+                                <div class="navOption">
+                                        <a href = "{{url_for('register')}}">Register</a>
+                                </div> 
+                        {% endif %}
+
+                        <div class="homePage">
+                                <a href = "{{url_for('index')}}"><img src="{{ url_for('static', filename='App.png') }}" alt="App Icon" style="width: 100px; height: auto;"></a>
+                        </div> 
+
+                        <div style="clear: both;"></div>
+
+
+                </nav>
+                {%block content%}{% endblock %}
+                
+                <script src="{{ url_for('static', filename='script.js') }}"></script>
+        </body>
+</html>

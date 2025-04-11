@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>Create New Post</h1>
+    <form action="{{ url_for('create') }}" method="POST">
+        <div>
+            <label for="title"><strong>Title</strong></label>
+            <input type="text" name="title" id="title" required>
+        </div>
+        
+        <div style="margin-top: 15px;">
+            <label for="content"><strong>Content</strong></label>
+            <br>
+            <textarea name="content" id="content" rows="25" style="width: 100%; max-width: 650px;" required></textarea>
+        </div>
+        
+        <button type="submit" style="margin-top: 15px;">Create Post</button>
+    </form>
+{% endblock %}
