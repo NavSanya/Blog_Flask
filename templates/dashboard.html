@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+        <h1>Your Dashboard</h1>
+        <a href = "{{url_for('create')}}">Create new post</a>
+        <br>
+        <br>
+        <div class="posts">
+                {% for post in  posts%}
+                        <div class = "post">
+                                <iframe src="{{ url_for('view_post', post_id=post['_id']) }}" class="frame">
+                                </iframe>
+                                <h2><a href="{{ url_for('edit', post_id=post['_id']) }}">{{ post['title'] }}</a></h2>
+                                <small>By {{ post['author']}}</small>
+                                <a href="{{ url_for('edit', post_id=post['_id']) }}">Edit</a> |
+                                <a href="{{ url_for('delete', post_id=post['_id']) }}" onclick="return confirm('Are you sure?')">Delete</a>
+                        </div>
+                {% else %}
+                        <p>No posts found. Create one to get started!</p>
+                        
+                {% endfor %}
+        </div>
+{% endblock %}

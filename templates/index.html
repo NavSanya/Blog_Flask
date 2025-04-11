@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{%block content%}
+        <h1>Welcome to the Blog</h1>
+        <div class = "posts">
+                {% for post in posts %}
+                        <div class="post">
+                                
+                                <iframe src="{{ url_for('view_post', post_id=post['_id']) }}" class="frame">
+                                </iframe>
+
+                                <h2><a href="{{ url_for('edit', post_id=post['_id']) }}">{{ post['title'] }}</a></h2>
+                                <small>By {{ post['author']}}</small>
+                        </div>
+                        {% else %}
+                        <p>No posts yet! Be the first to create one.</p>
+                {% endfor %}
+        </div>
+{% endblock %}
